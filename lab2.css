@@ -1,0 +1,32 @@
+body {
+    background-color: rgba(10, 7, 14, 0.95);
+}
+
+a, p, div, li {
+    color: white;
+}
+
+.btn {
+    display: block;
+    cursor: pointer;
+}
+
+.text {
+    display: block;
+    padding: 16px;
+    margin: 16px;
+    border: 1px dashed silver;
+    height: auto;
+}
+
+.spoiler input[type=checkbox] {
+    display: none;
+}
+
+.spoiler input[type=checkbox] + .text {
+    display: none;
+}
+
+.spoiler input[type=checkbox]:checked + .text {
+    display: block;
+}
