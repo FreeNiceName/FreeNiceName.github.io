@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 4</title>
+</head>
+
+<body>
+    <a href="index.html">Назад</a>
+    <div style="height: 20px;"></div>
+    <form action="lab4.php" method="POST">
+        <label for="first">Первое значение</label>
+        <input type="number" id="first" name="first" step="0.01" value="0">
+        <div>
+            <input type="radio" name="operation" value="+"> <span>+</span>
+            <input type="radio" name="operation" value="-"> <span>-</span>
+            <input type="radio" name="operation" value="/"> <span>/</span>
+            <input type="radio" name="operation" value="*"> <span>*</span>
+        </div>
+        <label for="second">Второе значение</label>
+        <input type="number" id="second" name="second" step="0.01" value="0">
+        <div>
+            <button type="submit" style="margin-top: 20px;">Вычислить</button>
+        </div>
+    </form>
+</body>
+
+</html>
