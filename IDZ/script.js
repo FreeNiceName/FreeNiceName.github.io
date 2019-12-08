@@ -23,11 +23,6 @@ $(function () {
         const btn = $(this);
         if (check_step(btn)) {
             btn.text(step ? 'O' : 'X');
-            if (check_tie()) {
-                alert('Draw!');
-                clear_btn();
-                return;
-            }
             $('#player-name').text(step ? player_1 : player_2);
 			$('#step').text(step ? 'X' : 'O');
 
@@ -37,6 +32,12 @@ $(function () {
                 won_player.text(+won_player.text() + 1);
                 clear_btn();
 				return;
+            }
+			
+			if (check_tie()) {
+                alert('Draw!');
+                clear_btn();
+                return;
             }
             step = !step;
         }
