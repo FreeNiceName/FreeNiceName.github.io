@@ -28,7 +28,8 @@ $(function () {
                 clear_btn();
                 return;
             }
-            $('#player-name').text(step ? player_2 : player_1);
+            $('#player-name').text(step ? player_1 : player_2);
+			$('#step').text(step ? 'X' : 'O');
 
             if (check_win()) {
                 alert(`Player ${step ? player_2 : player_1} won!`);
@@ -83,9 +84,10 @@ $(function () {
     }
 
     function clear_btn() {
-        $('#player-name').text(player_1);
 		first_step = !first_step;
         step = first_step;
+		$('#player-name').text(step ? player_2 : player_1);
+		$('#step').text(step ? 'O' : 'X');
 
         $('button').each(function () {
             $(this).text("'");
