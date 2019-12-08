@@ -2,7 +2,7 @@ $(function () {
     let player_1;
     let player_2;
     let step = 0;
-	let first_step = 1;
+    let first_step = 1;
 
     $('#start').click(function () {
         player_1 = $('#player-info-1').val();
@@ -24,17 +24,17 @@ $(function () {
         if (check_step(btn)) {
             btn.text(step ? 'O' : 'X');
             $('#player-name').text(step ? player_1 : player_2);
-			$('#step').text(step ? 'X' : 'O');
+	    $('#step').text(step ? 'X' : 'O');
 
             if (check_win()) {
                 alert(`Player ${step ? player_2 : player_1} won!`);
                 const won_player = $(`#player-${step + 1}-score`);
                 won_player.text(+won_player.text() + 1);
                 clear_btn();
-				return;
+		return;
             }
 			
-			if (check_tie()) {
+	    if (check_tie()) {
                 alert('Draw!');
                 clear_btn();
                 return;
@@ -85,10 +85,10 @@ $(function () {
     }
 
     function clear_btn() {
-		first_step = !first_step;
+	first_step = !first_step;
         step = first_step;
-		$('#player-name').text(step ? player_2 : player_1);
-		$('#step').text(step ? 'O' : 'X');
+	$('#player-name').text(step ? player_2 : player_1);
+	$('#step').text(step ? 'O' : 'X');
 
         $('button').each(function () {
             $(this).text("'");
