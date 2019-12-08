@@ -1,1 +1,0 @@
-# Simple JavaScript Tic Tac Toe game 
