@@ -1,0 +1,47 @@
+body {
+    background-color: rgba(0, 0, 0, 0.83);
+    color: #bbbbbb;
+}
+
+a, p {
+    color: #bbbbbb;
+}
+
+.game-field {
+    background-color: rgba(62, 62, 62, 0.83);
+    color: #bbbbbb;
+    border: 0;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+}
+
+.container-left {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 35%;
+    left: 25%;
+    margin: -100px 0 0 -125px;
+}
+
+.container-right {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 35%;
+    right: 25%;
+    margin: -100px 0 0 -125px;
+}
+
+.center-screen {
+    position: absolute;
+    left: 50%;
+    margin: 50px 0 0 -125px;
+}
+
+#player-info {
+    position: absolute;
+    left: 50%;
+    margin: 125px 0 0 -125px;
+}
