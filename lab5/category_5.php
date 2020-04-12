@@ -34,7 +34,7 @@
 
         $sql = "SELECT * FROM items WHERE category_id=$category_id";
         foreach ($dbh->query($sql) as $row) {
-            var_dump($row);
+            print_r($row);
             print '<br><br>';
         }
     } catch (PDOException $e) {

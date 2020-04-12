@@ -33,10 +33,10 @@
         $price_min = $_POST['price_min'];
         $price_max = $_POST['price_max'];
 
-        print "$price_min - $price_max<br><br>";
+        print "Price $price_min - $price_max<br><br>";
         $sql = "SELECT * FROM items WHERE price between $price_min and $price_max";
         foreach ($dbh->query($sql) as $row) {
-            var_dump($row);
+            print_r($row);
             print '<br><br>';
         }
     } catch (PDOException $e) {

@@ -34,7 +34,7 @@
 
         $sql = "SELECT * FROM items WHERE vendor_id=$vendor_id";
         foreach ($dbh->query($sql) as $row) {
-            var_dump($row);
+            print_r($row);
             print '<br><br>';
         }
     } catch (PDOException $e) {
