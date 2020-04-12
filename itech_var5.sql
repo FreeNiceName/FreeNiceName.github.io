@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 13 2020 г., 21:33
+-- Время создания: Апр 12 2020 г., 18:40
 -- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.3
+-- Версия PHP: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -53,7 +52,7 @@ CREATE TABLE `items` (
   `id` int(11) NOT NULL,
   `name` varchar(80) DEFAULT NULL,
   `price` double DEFAULT NULL,
-  `quantity` varchar(80) DEFAULT NULL,
+  `quantity` int(11) UNSIGNED DEFAULT NULL,
   `vendor_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -63,14 +62,14 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `name`, `price`, `quantity`, `vendor_id`, `category_id`) VALUES
-(1, 'item_1', 228, '45a', 1, 1),
-(2, 'item_2', 54, 'a34', 2, 2),
-(3, 'item_3', 234, 'dh35', 3, 3),
-(4, 'item_4', 64, 'a22', 4, 1),
-(5, 'item_5', 657, '45a', 2, 2),
-(6, 'item_6', 345, 'a22', 1, 3),
-(7, 'item_7', 756, 'a2', 2, 2),
-(8, 'item_8', 978, '6g', 4, 2);
+(1, 'item_1', 228, 45, 1, 1),
+(2, 'item_2', 54, 23, 2, 2),
+(3, 'item_3', 234, 12, 3, 3),
+(4, 'item_4', 64, 35, 4, 1),
+(5, 'item_5', 657, 45, 2, 2),
+(6, 'item_6', 345, 25, 1, 3),
+(7, 'item_7', 756, 0, 2, 2),
+(8, 'item_8', 978, 6, 4, 2);
 
 -- --------------------------------------------------------
 
