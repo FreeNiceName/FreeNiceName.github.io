@@ -31,9 +31,10 @@
     try {
         $dbh = new PDO($dsn, $username, $password, $options);
         $category_id = $_POST['category_id'];
-
-        $sql = "SELECT * FROM items WHERE category_id=$category_id";
-        foreach ($dbh->query($sql) as $row) {
+        $sql = $dbh->prepare('SELECT * FROM items WHERE category_id=:category_id');
+		$sql->bindParam(':category_id', $category_id);
+		$sql->execute();
+        while ($row = $sql->fetch()) {
             print_r($row);
             print '<br><br>';
         }
