@@ -26,7 +26,6 @@
         </tr>
         <tr>
             <td>
-                <form action="client_msg.php" method="POST">
                 <textarea cols="40" rows="10">
                     <?php
                         require_once __DIR__ . "/vendor/autoload.php";
@@ -42,10 +41,8 @@
                         }
                         ?>
                     </textarea>
-                </form>
             </td>
             <td>
-                <form action="io_traffic.php" method="post">
                 <textarea cols="40" rows="10">
                     <?php
                         require_once __DIR__ . "/vendor/autoload.php";
@@ -68,7 +65,6 @@
                         }
                         ?>
                     </textarea>
-                </form>
             </td>
             <td>
                 <form action="price.php" method="post">
