@@ -14,7 +14,14 @@
         input {
             margin: 5px;
         }
+        a {
+            color: white;
+        } 
+        .hiden {
+            display: none;
+        }
     </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -73,10 +80,35 @@
                     <label for="max">Max</label>
                     <input type="number" name="max" id="max"> <br>
                     <button type="submit">Submit</button>
+                    <a id="last" style="display: none" href="#">Show last</a>
+                    <ul id="price">
+                    </ul>
                 </form>
             </td>
         </tr>
     </table>
+    
+    <script>
+        $(document).ready(function() {
+            if(localStorage.getItem('price') !== null) {
+                $('#last').css('display', 'block');
+            }
+
+            $('#last').click(function() {
+                let price = $('#price');
+                if(!price.children().length) {
+                    price.html(localStorage.getItem('price'));
+                    $(this).html('Hide');
+                } else if(price.hasClass('hiden')) {
+                    price.removeClass('hiden');
+                    $(this).html('Hide');
+                } else {
+                    price.addClass('hiden');
+                    $(this).html('Show last');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
