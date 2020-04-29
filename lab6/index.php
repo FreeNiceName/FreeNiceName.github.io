@@ -27,14 +27,13 @@
 <body>
     <table width="100%">
         <tr>
-            <td>перечень производителей, с которыми работает магазин</td>
-            <td>товары, отсутствующие на складе (т.е. вообще они есть, но сейчас количество 0)</td>
-            <td>товары в выбранном ценовом диапазоне</td>
+            <td>Перечень производителей, с которыми работает магазин</td>
+            <td>Товары, отсутствующие на складе (т.е. вообще они есть, но сейчас количество 0)</td>
+            <td>Товары в выбранном ценовом диапазоне</td>
         </tr>
         <tr>
             <td>
-                <textarea cols="40" rows="10">
-                    <?php
+                <textarea cols="40" rows="10"><?php
                         require_once __DIR__ . "/vendor/autoload.php";
 
                         try {
@@ -46,12 +45,10 @@
                         } catch (PDOException $e) {
                             echo $e;
                         }
-                        ?>
-                    </textarea>
+                        ?></textarea>
             </td>
             <td>
-                <textarea cols="40" rows="10">
-                    <?php
+                <textarea cols="40" rows="10"><?php
                         require_once __DIR__ . "/vendor/autoload.php";
                         try {
                             $collection = (new MongoDB\Client)->itech_var5->shop;
@@ -70,8 +67,7 @@
                         } catch (PDOException $e) {
                             echo $e;
                         }
-                        ?>
-                    </textarea>
+                        ?></textarea>
             </td>
             <td>
                 <form action="price.php" method="post">
